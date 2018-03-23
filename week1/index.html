@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Homework-Week03</title>
+    <meta name="description" content="Homework-Week01-JS-JQ">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="style.css">
+       
+      
+    </head>
+   
+    <body>
+        <header class="headerspace">
+            <h1>
+            JavaScript and JQuery HomeWork-Week01
+            </h1>
+            <p>Click here!</p>
+        </header>
+        <div class="tab">
+            <button class = "tablinks" onclick="openQuest(event, 'Quest1')" title="Declare a variable"> Quest1 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest2')" title="Round off a Number">Quest2 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest3')" title="Array of Colors">Quest3 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest4')" title="Check type of Variable">Quest4 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest5')" title="Modulous operator">Quest5 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest6')" title="Array of Multiple Datatypes">Quest6 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest7')" title="Infinity Compare">Quest7 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest8')" title="Length of String">Quest8 </button>
+                
+        </div>
+        <div id="Quest1" class="tabcontent">
+            <p><span class="Questions">1. Declare a variable x and initialize it with an integer.</span><br>
+            <span class="myCode">var x = 20;<br>
+                    alert("Click ok to know the value of the declared variable")<br>
+                    alert(x);</span></p>
+            <button class="run" onclick="runCode1()"> Run and test</button>
+        </div>
+
+        <div id="Quest2" class="tabcontent">
+            <p><span class="Questions">2. How do you round the number 7.25, to the nearest integer?</span><br>
+                <span class="myCode">var y = Math.round(7.25);<br>
+                    alert("Click ok to know the rounded off value of 7.25");<br>
+                    alert(y);</span></p>
+            <button class="run" onclick="runCode2()"> Run and test</button>
+        </div>
+
+        <div id="Quest3" class="tabcontent">
+            <p><span class="Questions">3. Create a array called colors with the strings red, green and blue inside.</span><br>
+                <span class="myCode"> var colors = ["red", "green", "Blue"];<br>
+                    var a = prompt("The array of colors is ", colors);</span></p>
+            <button class="run" onclick="runCode3()"> Run and test</button>
+        </div>
+
+        <div id="Quest4" class="tabcontent">
+            <p><span class="Questions">4. Write a program that checks the types of two variables and prints out SAME TYPE if they are the same type.</span><br>
+                <span class="myCode">
+                        let x1 = "Hello";<br>
+
+                        let y1 =  9;<br>
+                        
+                        alert("First variable is" + " " + x1 + " " + "Second variable is" + " " + y1);<br>
+                        
+                        alert(typeof x1 + " " + typeof y1);<br>
+                        
+                            if (typeof x1  ===  typeof y1) {<br>
+                              
+                              alert("Same type");<br>
+                            }<br>
+                              else {<br>
+                                alert("Not of Same type");<br>
+                            }
+                        
+                                         
+                        </span></p>
+            <button class="run" onclick="runCode4()"> Run and test</button>
+        </div>
+
+        <div id="Quest5" class="tabcontent">
+            <p><span class="Questions">5. If x equals 7, and the only other statement is x = x % 3, what would be the new value of x?</span><br>
+                <span class="myCode"> var x3 = 7;<br> 
+                                    x3 = x3 % 3;<br>
+                                    alert("The output of 7%3 is =" + x3);</span></p>
+            <button class="run" onclick="runCode5()"> Run and test</button>
+        </div>
+
+        <div id="Quest6" class="tabcontent">
+            <p><span class="Questions">6. Can you store multiple types in an array? Numbers and strings?</span><br>
+                <span class="myCode"> var multiple_Array = [1, "Hello", true, 3.333];<br>
+                        x4 = prompt("The multiple array is", multiple_Array);</span></p>
+            <button class="run" onclick="runCode6()"> Run and test</button>
+        </div>
+
+        <div id="Quest7" class="tabcontent">
+            <p><span class="Questions">7. Can you compare inifities? (Not in Eyad's world) - does 6/0 == 10/0? How can you test this?</span><br>
+                <span class="myCode">
+                        c = 6/0;<br>
+                        b = 10/0;<br>
+                    if(c === b) {<br>
+                        alert(c + b);<br>
+                        alert("both 6/0 and 10/0 are infinite numbers");
+                    }
+                    
+                </span></p>
+            <button class="run" onclick="runCode7()"> Run and test</button>
+        </div>
+
+        <div id="Quest8" class="tabcontent">
+           <p><span class="Questions"> 8. How can you find the length of the string you just created?</span><br>
+            <span class="myCode">var string_variable = prompt("Enter a string");<br>
+                    alert("The length of the string is =" + string_variable.length);</span></p>
+            <button class="run" onclick="runCode8()">  Run and test</button>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <script src="./main.js"></script>
+        <script src="./tabclick.js"></script>
+        <script src="./Declare_Variable.js"></script>
+        <script src="./Round_Num.js"></script>
+        <script src="./array_colors.js"></script>
+        <script src="./type_Of_Variable.js"></script>
+        <script src="./modulous_Result.js"></script>
+        <script src="./Multiple_Array.js"></script>
+        <script src="./infinity_Compare.js"></script>
+        <script src="./String_Length.js"></script>
+        
+    </body>
+</html>

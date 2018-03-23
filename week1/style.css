@@ -1,0 +1,74 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    
+}
+/* Style the Header*/
+header {
+    text-align: Center;
+    margin: 0;
+    border: .5px outset;
+    background: palevioletred;
+    height: 8em;
+    padding-top:5em;
+
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    line-height: 2em;
+}
+
+/* Style the Questions */
+p .Questions{
+    font-weight: bold;
+    
+}
+/* Style the Code*/
+
+p .myCode{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: navy;
+    font-weight: bold;
+     
+}
+/* Run and Test button style*/
+.run {
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+.run:hover {
+    transform: scale(1.1);
+}
+
