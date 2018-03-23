@@ -72,3 +72,23 @@ p .myCode{
     transform: scale(1.1);
 }
 
+@media all and (max-width: 800px) {
+    header {
+        
+        height:100%;
+        line-height: 2em;
+    }
+    .tabcontent {
+        height: 100%;
+        line-height: 1em;
+        font-size:12px;
+           
+            
+    }
+    .run {
+        
+        padding: 2px;
+        
+    }
+    
+}
