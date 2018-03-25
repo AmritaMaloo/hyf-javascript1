@@ -14,6 +14,7 @@ $('button').click(function () {
     if(validateEmail(email)){
         $('.message1').text('Success')
     } else {
+        Event.preventDefault();
         $('.message1').text('Did not validate email')
 
     }
@@ -21,6 +22,7 @@ $('button').click(function () {
     if(validateProfile(profile)){
         $('.message2').text('Success')
     } else {
+        Event.preventDefault();
         $('.message2').text('the limit exceeds 10 words')
     }
 
@@ -28,6 +30,7 @@ $('button').click(function () {
     if(validateSubject(subject)){
         $('.message3').text('Success')
     } else {
+        Event.preventDefault();
         $('.message3').text('the limit exceeds 10 words or you can only enter Maths, English, Danish')
     }
 
