@@ -1,0 +1,125 @@
+* {box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    
+}
+/* Style the Header*/
+header {
+    text-align: center;
+    margin: 0;
+    border: .5px outset;
+    background:black;
+    color: palevioletred;
+    height: 8em;
+    padding-top:4em;
+    cursor: pointer;
+
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 10%;
+    height: 200%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 8px 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: outset thin;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border: none;
+    height: 100%;
+}
+
+/* Style the Questions */
+p {
+    padding: 10px;
+    font-weight: bold;
+    
+}
+/* Style the Code*/
+
+code{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    color: navy;
+    line-height: 1em;
+    
+     
+}
+/* Run and Test button style*/
+.run {
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: bold;
+    float: right;
+    margin-right: 500px;
+    margin-top: 20px;
+    
+}
+.run:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/*@media all and (max-width: 800px) {
+    header {
+        
+        height:100%;
+        line-height: 2em;
+    }
+    .tabcontent {
+        height: 100%;
+        line-height: 1em;
+        font-size:12px;
+           
+            
+    }
+    .run {
+        
+        padding: 2px;
+        
+    }
+    
+}*/

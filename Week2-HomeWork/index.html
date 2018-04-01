@@ -1,0 +1,584 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Homework-Week02-JS-JQ</title>
+    <meta name="description" content="Homework-Week02-JS-JQ">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    
+       
+      
+    </head>
+   
+    <body>
+        <header class="headerspace">
+            <h1>
+            JavaScript and JQuery HomeWork-Week02
+            </h1>
+            
+        </header>
+        <div class="tab">
+            <button class = "tablinks" onclick="openQuest(event, 'Quest1')" title="Sum of 3 arguments"> Quest1 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest2')" title="Recieve a color of the car">Quest2 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest3')" title="print the object values and properties">Quest3 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest4')" title="Receives color and the code for vehicle">Quest4 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest5')" title="without if Statement">Quest5 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest6')" title="receives age of the vehicle">Quest6 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest7')" title="list of Vehicle">Quest7 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest8')" title="third element of the list">Quest8 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest9')" title="receives the index from the list and take it as a  code">Quest9 </button> 
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest10')" title="advertisement">Quest10 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest11')" title="add one more vehicle">Quest11 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest12')" title="empty object">Quest12 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest13')" title="compare the objects">Quest13 </button>
+            <button class = "tablinks" onclick="openQuest(event, 'Quest14')" title="function as argument">Quest14 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest15')" title="array-compare">Quest15 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest16')" title="effect of changing the objects">Quest16 </button>
+
+            <button class = "tablinks" onclick="openQuest(event, 'Quest17')" title="value of typeof typeof">Quest17 </button>
+            
+
+        </div>
+        <div id="Quest1" class="tabcontent">
+            <p>1. Create a function that takes 3 arguments and returns the sum of the three arguments.</p>
+            <pre>
+                <code>
+                    var a, b, c;
+                    a = prompt("Enter value one ");
+                    b = prompt("Enter value 2" );
+                    c = prompt("Enter value 3");
+                    var total = sum (a, b, c);
+                    alert(total);
+                    
+                    function sum (a, b, c) {
+                    
+                        return (+a + +b + +c);
+                    }
+                    
+                </code>
+            </pre>
+            <button class="run" onclick="runCode1()"> Run and test</button>
+        </div>
+    
+        <div id="Quest2" class="tabcontent">
+            <p>2. Create a function named colorCar that receives a color, and prints out, "a red car" for example.</p>
+                <pre>
+                    <code>
+                        var color = prompt("Enter any color");
+                        colorCar(color);
+                        function colorCar (color) {
+                            alert("a" + " " + color + " " + "car");
+                        }
+                    </code>
+
+                </pre>
+
+            <button class="run" onclick="runCode2()"> Run and test</button>
+        </div>
+
+        <div id="Quest3" class="tabcontent">
+            <p>3. Create an object and a function that takes the object as a parameter and prints out all of its names and values.</p>
+            <pre>
+                <code>
+                    var employee = {
+                        name: prompt("Enter the name of the employee"),
+                        age: prompt("Enter age"),
+                        Qualification: prompt("Enter Qualification / Degree"),
+                        work_ex: prompt("Enter the years of Work Experience")
+                        
+                    };
+                    employee_details(employee);
+                    
+                    function employee_details(details) {
+                        var propValue;
+                        var array_obj = [];
+                        for(var propName in details) {
+                            propValue =  details[propName];
+                            array_obj.push([propName, propValue], "\n");
+                        }    
+                        
+                        alert(array_obj);
+                        
+                        
+                    }
+                </code>
+                    
+            </pre>   
+            <button class="run" onclick="runCode3()"> Run and test</button>
+        </div>
+
+        <div id="Quest4" class="tabcontent">
+            <p>4. Create a function named vehicleType that receives a color, and a code, 1 for car, 2 for motorbike. And prints "a blue motorbike" for example when called as vehicleType("blue", 2)</p>
+            <pre>
+                <code>
+                    var color1, code1;
+                    color1 = prompt("Enter the color you like");
+                    code1 = prompt("Enter the code either 1 or 2");
+                    
+                    vehicleType(color1, code1);
+                    
+                    function vehicleType( color1, code1) {
+                    
+                        switch(code1) {
+                            case "1" :
+                                alert("a" + " " + color1 + " " + "car");
+                                break;
+                            case "2" :
+                                alert("a" + " " + color1 + " " + "motorbike");
+                                break;
+                                
+                        }
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode4()"> Run and test</button>
+        </div>
+
+        <div id="Quest5" class="tabcontent">
+            <p>5. Can you write the following without the if statement, but with just as a single line with console.log(...);?
+                if (3 == 3) { <br>
+                    console.log("true")<br>
+                } else {<br>
+                    console.log("false")<br>
+                }</p>
+            <pre>
+                <code>
+                    var x = prompt("checking the conditional sentence without using if", ((3===3) ? 'true' : 'false'));
+                </code>
+            </pre>
+            <button class="run" onclick="runCode5()"> Run and test</button>
+        </div>
+
+        <div id="Quest6" class="tabcontent">
+            <p>6. Create a function called vehicle, like before, but takes another parameter called age, so that vehicle("blue", 1, 5) prints "a blue used car"</p>
+            <pre>
+                <code>
+                    var color2, code2, age;
+                    color2 = prompt("Enter the color you like");
+                    code2 = prompt("Enter the code either 1 or 2");
+                    age =  prompt("Enter the age in years");
+                    
+                    vehicle(color2, code2, age);
+                    
+                    function vehicle(color2, code2, age) {
+                    
+                        switch(code2) {
+                            case "1" :
+                                var checked_age = checkage(age);
+                                alert("a" + " " + color2 + " " + checked_age + " " + "car");
+                                break;
+                                
+                            case "2" :
+                                checked_age = checkage(age);
+                                alert("a" + " " + color2 + " " + checked_age + " " + "motorbike");
+                                break;
+                                
+                        }
+                    }
+                    
+                    function checkage(age) {
+                        if(age lessthanequalto "4") 
+                            var x1 = 'new';
+                        else
+                            x1 = 'old';
+                    
+                        return x1;
+                    
+                    }
+                </code>
+
+            </pre>
+            <button class="run" onclick="runCode6()"> Run and test</button>
+        </div>
+
+        <div id="Quest7" class="tabcontent">
+            <p>7. Make a list of vehicles, you can add "motorbike", "caravan", "bike", or more.</p>
+            <pre>
+                <code>
+                    function runCode7() {
+                        var listVehicle = ['motorbike', 'car', 'bike', 'caravan'];
+                        
+                        alert("the list of vehicle \n"  + listVehicle);
+                        
+                    }
+                </code>
+                        
+            </pre>
+            <button class="run" onclick="runCode7()"> Run and test</button>
+        </div>
+
+        <div id="Quest8" class="tabcontent">
+            <p> 8. How do you get the third element from that list?</p>
+            <pre>
+                <code>function runCode8() {
+                    list = runCode7();
+                        
+                        alert('the third element of the list is \n'  + list[2]);
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode8()">  Run and test</button>
+        </div>
+        <div id="Quest9" class="tabcontent">
+            <p> 9. Change the function vehicle to use the list of question 4. So that vehicle("green", 3, 1) prints "a green new caravan".</p>
+            <pre>
+                <code>
+                    function runCode9() {
+                        list1 = runCode7();
+                        var color3, age3, code3;
+                        color3 = prompt("Enter the color you like");
+                        code3 = prompt("Enter the code  ( 0 to 3) from  the list");
+                        age3 =  prompt("Enter the age in years");
+                    
+                        vehicle(color3, code3, age3);
+                    
+                        function vehicle(color3, code3, age3) {
+                    
+                            if(age3 lessthan= "4") 
+                                alert("a" + " " + color3 + " " + "new" + " " + list1[code3]);
+                            else
+                                alert("a" + " " + color3 + " " + "old" + " " + list1[code3]);
+                    
+                        }
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode9()">  Run and test</button>
+        </div>
+        <div id="Quest10" class="tabcontent">
+            <p> 10. Use the list of vehicles to write an advertisement. So that it prints something like: "Amazing Joe's Garage, we service cars, motorbikes, caravans and bikes."</p>
+            <pre>
+                <code>
+                    function runCode10() {
+          
+                        list2 = runCode7();
+                        advertisement(list2);
+                }
+                
+                function advertisement(listad) {
+                
+                    var ad_list = [];
+                    var i;
+                    for(i = 0; i lessthan (listad.length-2); i++) {
+                
+                        ad_list.push(listad[i]);
+                
+                    }
+                
+                
+                    ad_list.push(listad[i] + " " + "and" + " " + listad[i + 1]);
+                
+                    alert("Amazing Joe's Garage, we service" + " " + ad_list);
+                
+                }
+                
+                </code>
+            </pre>
+            <button class="run" onclick="runCode10()">  Run and test</button>
+        </div>
+        <div id="Quest11" class="tabcontent">
+            <p> 11. What if you add one more vehicle to the list, can you have that added to the advertisement without changing the code for question 7?</p>
+            <pre>
+                <code>
+                    list3 = runCode7();
+                    var e1 = prompt("Add one more type of vehicle to the Vehiclelist");
+                    list3.push(e1);
+                    advertisement(list3);
+                </code>
+            </pre>
+            <button class="run" onclick="runCode11()">  Run and test</button>
+        </div>
+        <div id="Quest12" class="tabcontent">
+            <p> 12. Create an empty object</p>
+            <pre>
+                <code>
+                    var emptyObj = {};
+                    alert ("it's an Empty object" + emptyObj);
+                </code>
+
+            </pre>
+            <button class="run" onclick="runCode12()">  Run and test</button>
+        </div>
+        <div id="Quest13" class="tabcontent">
+            
+            <p> 13. Create a function that takes two objects as parameters and compares them. You will actually need to write two functions — one that compares with == and one that compares with ===. Remember that objects can have objects inside of them so you'll need to find a way to compare every element of every object (types and values). For example:</p>
+            <pre>
+                <code>
+                    function runCode13() {
+                        var obj1 = {
+                            a: 1,
+                            b: "this is the letter b",
+                            c: {
+                                foo: "what is a foo anyway",
+                                bar: [1, 2, 3, 4]
+                            }
+                            };
+                            
+                            var obj2 = {
+                            a: "1",
+                            b: "this is the letter b",
+                            c: {
+                                foo: "what is a foo anyway",
+                                bar: [1, 2, 3, 4]
+                            }
+                            };
+                    
+                            
+                        Object.is = function (ob1, ob2) {
+                        
+                            for (var p in ob1) {
+                                
+                                if (ob1.hasOwnProperty(p) !== ob2.hasOwnProperty(p)) return false;
+                            
+                                switch (typeof (ob1[p])) {
+                                    
+                                    case 'object':
+                                        if (!Object.is(ob1[p], ob2[p])) return false;
+                                        break;
+                                    
+                                    default:
+                                        if (ob1[p] != ob2[p]) return false;
+                                        
+                                }
+                            }
+                            
+                            for (var p in ob2) {
+                                if (typeof (ob1[p]) == 'undefined') return false;
+                            }
+                        return true;
+                        }
+                    
+                        alert("The two objects are " + (Object.is(obj1, obj2)));  
+                    
+                        
+                        
+                    }
+                
+                </code>
+            </pre>
+            <button class="run" onclick="runCode13()">  Run and test</button>
+        </div>
+        <div id="Quest14" class="tabcontent">
+            <p>14. We saw that we can pass functions as arguments to other functions. Your task is to write a function that takes another function as an argument and runs it.</p>
+            <pre>
+                <code>
+                    function foo (func) {
+                        // What to do here? 
+                        alert("I am a function which has a function  argument (func) inside, that is  " + func);
+                        func();
+                            
+                    }
+                    
+                    function bar () {
+                        var add1 = 4 + 5;
+                        alert('Hello, I am bar!');
+                    }
+                    
+                    foo(bar);  
+                </code>
+            </pre>
+            <button class="run" onclick="runCode14()">  Run and test</button>
+        </div>
+        <div id="Quest15" class="tabcontent">
+            <p> 15. Write some code to test two arrays for equality using == and ===. Test the following:</p>
+            <pre>
+                <code>
+                    var x = [1, 2, 3];
+                    var y = [1, 2, 3];
+                    var z = y;
+                    
+                    /*x == y, x === y and z == y and z == x? */
+                    
+                    var is_same =  arrayCompare(x, y);
+                    alert("Arrays x and y are " + is_same);
+                    var is_same1 = arrayCompare2(x, y);
+                    alert("Arrays x and y are strictly " + is_same1);
+                    var is_same2 = arrayCompare(z, y);
+                    alert("Arrays z and y are " + is_same2);
+                    var is_same3 = arrayCompare(z, x);
+                    alert("Arrays z and x are " + is_same3);
+                    
+                    function arrayCompare(lox, loy) {
+                        if(lox.length == loy.length) {
+                            for (var i = 0; i lessthan lox.length; i++) {
+                    
+                                if(lox[i] == loy[i])   {
+                                continue;
+                                } else {
+                                    return false;
+                                    break;
+                                }
+                                            
+                            }
+                            return true;
+                        
+                    
+                        } else {
+                            return false;
+                        }
+                    
+                        
+                    
+                    }
+                    
+                    function arrayCompare2(lox1, loy1) {
+                    
+                        if(lox1.length == loy1.length) {
+                            for (var j = 0; j lessthan lox1.length; j++) {
+                    
+                                if(lox1[j] === loy1[j])   {
+                                    continue;
+                                } else {
+                                    return false;
+                                    break;
+                                }
+                                        
+                            }
+                            return true;
+                    
+                    
+                        } else {
+                        return false;
+                        }
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode15()">  Run and test</button>
+        </div>
+        <div id="Quest16" class="tabcontent">
+            <p> 16. Show that changing `o2` changes `o3` (or not) and changing ~~`o2` changes `o3`~~ `o1` changes `o3`(or not). 
+
+            Does the order that you assign (`o3 = o2` or `o2 = o3`) matter?</p>
+            <pre>
+                <code>
+                    function runCode16() {
+
+                        var o1 = { foo: 'bar' };
+                        var o2 = { foo: 'bar' };
+                        var o3 = o2;
+                        
+                    
+                    
+                    /*Show that changing `o2` changes `o3` (or not) and changing ~~`o2` changes `o3.
+                    */
+                    
+                    
+                    objectpass(o2, o3);
+                    
+                        function objectpass(op2, op3) {
+                            var propValue1;
+                            var propValue2;
+                            var array_op2 = [];
+                            var array_op3 = [];
+                            for(var propName1 in op2) {
+                                propValue1 =  op2[propName1];
+                                array_op2.push([propName1, propValue1], "\n");
+                            }
+                            for(var propName2 in op3) {
+                                propValue2 = op3[propName2];
+                                array_op3.push([propName2, propValue2], "\n");
+                            }
+                    
+                            alert("first object  is " + "\n" + array_op2 + "\n" + "second is  O3 is" + "\n" + array_op3);
+                            
+                    
+                        }
+                           
+                    
+                        var onemore = prompt("enter one more property e.g. 'flowername' to o2");
+                        o2.flower = onemore;
+                        objectpass(o2, o3);
+                    
+                        
+                       o2.flower = prompt("Let's change the value of flower e.g.", 7);
+                      
+                       objectpass(o2, o3);
+                       alert("rightnow the type of Flower in o2 and o3 is respectively:  " + typeof (o2.flower) + " " + typeof (o3.flower));
+                    
+                      
+                       o2.flower = Number(o2.flower);
+                       alert("after changing the type of flower in O2 'Number' the type of Flower in o2 and o3 is respectively:  " + typeof (o2.flower) + " " + typeof (o3.flower));
+                       objectpass(o2, o3);
+                    
+                    
+                       /*Show that `~~ `o1` changes `o3`(or not)*/
+                       delete o3.flower;
+                    
+                       objectpass(o1, o3);
+                       o1.agree = prompt("Let's add one more property 'agree' in o1", 1);
+                       objectpass(o1, o3);
+                    
+                       /*Does the order that you assign (`o3 = o2` or `o2 = o3`) matter? {Jim Cramer: ???}*/
+                    
+                       alert("Let's change the object O2 and show O2, O3,  while O3 = O2");
+                       o2.string1 = 'laptop';
+                       o2.string2 = 'mobile';
+                       objectpass(o2, o3);
+                       alert("Let's change the object O3 and show O2,O3,  while O3 = O2");
+                       delete o3.string1;
+                       objectpass(o2, o3);
+                       alert("Let's change the object O2 and show O2,O3,  while O2 = O3");
+                       o2 = o3;
+                       objectpass(o2, o3);
+                       delete o2.string2;
+                       o2.string3 = 'Newlaptop';
+                       o2.string4 = 'Newmobile';
+                       objectpass(o2, o3);
+                    }
+                       
+                </code>
+            </pre>
+            <button class="run" onclick="runCode16()">  Run and test</button>
+        </div>
+        <div id="Quest17" class="tabcontent">
+            <p> 17.What does the following code return? </p>
+            <pre>
+                <code>
+                    function runCode17() {
+                        let bar = 42; 
+                        alert("typeof typeof bar is (always)  "  +  typeof typeof bar);
+                        
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode17()">  Run and test</button>
+        </div>
+        
+        <script src="./tabclick.js"></script>
+        <script src="./array-compare.js"></script>
+        <script src="./function_argument.js"></script>
+        <script src="./sum.js"></script>
+        <script src="./colorcar.js"></script>
+        <script src="./Obj-Func.js"></script>
+        <script src="./vehicletype.js"></script>
+        <script src="./without_if.js"></script>
+        <script src="./used-vehicle.js"></script>
+        <script src="./list-vehicles.js"></script>
+        <script src="./emptyObj.js"></script>
+        <script src="./obj-changes.js"></script>
+        <script src="./typeof-typeof.js"></script>
+        <script src="./compareObj.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <script src="./main.js"></script>
+       
+        
+        
+    </body>
+</html>
