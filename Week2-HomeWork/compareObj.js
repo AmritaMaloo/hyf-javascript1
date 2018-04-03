@@ -31,7 +31,7 @@ function runCode13() {
                     break;
                 
                 default:
-                    if (ob1[p] != ob2[p]) return false;
+                    if (ob1[p] !== ob2[p]) return false;
                     
                     
             }
@@ -43,7 +43,7 @@ function runCode13() {
     return true;
     }
 
-    alert("The two objects are " + (Object.is(obj1, obj2)));  
+    alert("The two objects are strictly " + (Object.is(obj1, obj2)));  
 
     
     
