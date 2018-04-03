@@ -54,10 +54,13 @@
 
             <button class = "tablinks" onclick="openQuest(event, 'Quest17')" title="value of typeof typeof">Quest17 </button>
             
+            <button class = "tablinks" onclick="openQuest(event, 'Quest18')" title="value of typeof typeof">Quest18 </button>
+            
 
         </div>
         <div id="Quest1" class="tabcontent">
             <p>1. Create a function that takes 3 arguments and returns the sum of the three arguments.</p>
+            
             <pre>
                 <code>
                     var a, b, c;
@@ -74,21 +77,22 @@
                     
                 </code>
             </pre>
+         
             <button class="run" onclick="runCode1()"> Run and test</button>
         </div>
     
         <div id="Quest2" class="tabcontent">
             <p>2. Create a function named colorCar that receives a color, and prints out, "a red car" for example.</p>
-                <pre>
-                    <code>
-                        var color = prompt("Enter any color");
-                        colorCar(color);
-                        function colorCar (color) {
-                            alert("a" + " " + color + " " + "car");
-                        }
-                    </code>
+            <pre>
+                <code>
+                    var color = prompt("Enter any color");
+                    colorCar(color);
+                    function colorCar (color) {
+                        alert("a" + " " + color + " " + "car");
+                    }
+                </code>
 
-                </pre>
+            </pre>
 
             <button class="run" onclick="runCode2()"> Run and test</button>
         </div>
@@ -560,8 +564,46 @@
             </pre>
             <button class="run" onclick="runCode17()">  Run and test</button>
         </div>
+        <div id="Quest18" class="tabcontent">
+            <p> 18. Build a function that takes a string as an argument and make it console log the string in an "echoed" way like this (given the input "hello") <br>
+                // hello
+                // ello
+                // llo
+                // lo
+                // o
+            </p>
+            <pre>
+                <code>
+                    var string1 = prompt("Enter a string");
+                    echoString(string1);
+                    
+                    function echoString(str1) {
+                    
+                        var echoarray = [];
+                        
+                        var j = 0;
+                    
+                        for( var i = 0; i lessthan str1.length ; i++ ) {
+                            
+                            echoarray.push(str1.substring(i));
+                            echoarray.push("\n");
+                                 
+                    
+                                
+                        }
+                    
+                        alert(echoarray);
+                        
+                    
+                    }
+                </code>
+            </pre>
+            <button class="run" onclick="runCode18()">  Run and test</button>
+        </div>
         
         <script src="./tabclick.js"></script>
+        
+        <script src="./echostring.js"></script>
         <script src="./array-compare.js"></script>
         <script src="./function_argument.js"></script>
         <script src="./sum.js"></script>
